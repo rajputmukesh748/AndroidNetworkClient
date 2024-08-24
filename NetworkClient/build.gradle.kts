@@ -1,5 +1,4 @@
 plugins {
-    `maven-publish`
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
@@ -41,42 +40,7 @@ dependencies {
     //Ktor
     api(libs.bundles.ktor.client)
 
-    //Timber
-    api(libs.timber)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-}
-
-
-
-publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/rajputmukesh748/AndroidNetworkClient")
-            credentials {
-                username = project.findProperty("gpr.user") as String?
-                password = project.findProperty("gpr.key") as String?
-            }
-        }
-    }
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "com.rajputmukesh748"
-            artifactId = "androidNetworkClient"
-            version = "1.0.0"
-
-            afterEvaluate {
-                artifact("$buildDir/outputs/aar/NetworkClient-release.aar")
-            }
-
-            pom {
-                name.set("Android Network Client")
-                description.set("A network client library for Android")
-                url.set("https://github.com/rajputmukesh748/AndroidNetworkClient")
-            }
-        }
-    }
 }

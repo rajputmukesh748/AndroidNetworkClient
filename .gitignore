@@ -1,0 +1,57 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration files
+local.properties
+*.iml
+.idea/
+*.swp
+*.swo
+
+# Android Studio specific files
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/.name
+/.idea/misc.xml
+/.idea/gradle.xml
+/.idea/assetWizardSettings.xml
+/.idea/inspectionProfiles/
+/.idea/dictionaries
+/.idea/scopes/
+/.idea/uiDesigner.xml
+/.idea/compile-server.xml
+
+# Log files
+*.log
+
+# Keystore files
+*.jks
+*.keystore
+
+# ADB files
+*.apk
+*.ap_
+
+# Generated files
+*.hprof
+
+# Jetpack Compose specific files
+*.compose/
+*.compose-*.xml
+
+# Dependency directories
+/.m2/
+/.gradle/
+/build/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Linux system files
+.directory

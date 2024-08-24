@@ -23,7 +23,6 @@ import com.androidnetworkclient.ui.theme.AndroidNetworkClientTheme
 import com.networkclient.utils.toJson
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

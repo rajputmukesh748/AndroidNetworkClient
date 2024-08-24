@@ -3,7 +3,6 @@ package com.androidnetworkclient.network
 import com.networkclient.NetworkClient
 import com.networkclient.enums.LoggerLevel
 import io.ktor.client.HttpClient
-import timber.log.Timber
 
 object ApiClient {
 
@@ -13,7 +12,7 @@ object ApiClient {
         .requestTimeout(30000)
         .socketTimeout(30000)
         .enableRetryCount(isRetry = true, retryCount = 1)
-        .addLoggerInterceptor(LoggerLevel.ALL){ Timber.d(it) }
+        .addLoggerInterceptor(LoggerLevel.ALL){  }
         .build()
 
 }
